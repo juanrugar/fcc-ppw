@@ -12,8 +12,35 @@ body{
     color: var(--main-white);
 }
 
-.nav {
+#navbar.nav {
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--main-red);
+    box-shadow: 0 2px 0 rgba(0,0,0,0.4);
+    z-index:10;
+}
+ul {
+    list-style: none;
+}
+.nav-list {
+    display:flex;
+    margin-right: 2em;
+}
 
+.nav.list a:hover{
+    background: var(--main-blue);
+}
+.nav-list a {
+    font-size: 2.2rem;
+    padding: 2rem;
+}
+a {
+    text-decoration:none;
+    color: var(--main-white);
 }
 .welcome-section {
     display: flex;
@@ -23,7 +50,6 @@ body{
     width: 100%;
     height:100vh;
     background-color: #000;
-
 }
 
 h1 {
@@ -36,6 +62,32 @@ h1, h2 {
     text-align: center;
 }
 
+.projects-section {
+    padding: 6em 1rem;
+    text-align: center;
+    background: var(--main-blue);
+    width: 100%;
+}
 .contact-section {
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height:80hv;
+    padding: 6em 1rem;
+    background: var(--main-gray);
+}
+.contact-links {
+    display:flex;
+    justify-content: center;
+    width:100%;
+    max-width: 980px;
+    margin-top: 4rem;
+    flex-wrap: wrap;
+}
+.contact-details {
+    font-size: 2.4rem;
+    text-shadow: 2px 2px 1px #lflflf;
 }
