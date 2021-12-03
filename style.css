@@ -38,8 +38,11 @@ ul {
     font-size: 2.2rem;
     padding: 2rem;
 }
+*, ::before, ::after {
+    box-sizing: inherit;
+}
 a {
-    text-decoration:none;
+    text-decoration: none;
     color: var(--main-white);
 }
 .welcome-section {
@@ -63,10 +66,38 @@ h1, h2 {
 }
 
 .projects-section {
-    padding: 6em 1rem;
+    padding: 10em 2rem;
     text-align: center;
     background: var(--main-blue);
     width: 100%;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 4rem;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-bottom: 6rem;
+}
+.project{
+    background: var(--main-gray);
+    box-shadow: 1px 1px 2px rgb(0,0,0,0.5);
+    border-radius: 2px;
+}
+.project-image {
+    height: calc(100% -6.8rem);
+    width: 100%;
+    object-fit: cover;
+}
+
+img {
+    display:block;
+}
+.project-title {
+    font-size: 2rem;
+    padding: 2rem 0.5rem;
 }
 .contact-section {
     display: flex;
@@ -87,7 +118,16 @@ h1, h2 {
     margin-top: 4rem;
     flex-wrap: wrap;
 }
+.btn{
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 2px;
+}
 .contact-details {
     font-size: 2.4rem;
-    text-shadow: 2px 2px 1px #lflflf;
+    text-shadow: 2px 2px 1px #1f1f1f;
+}
+
+footer {
+    color: var(--main-gray);
 }
